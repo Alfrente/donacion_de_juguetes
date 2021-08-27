@@ -1,6 +1,6 @@
 package tienda_de_juguetes;
 
-public class Juguete {
+public class Juguete extends Factura {
 	public static final String MARCA = "";
 	public static final String PAIS_ORIGEN = "";
 	public static final double PRECIO_BASE = 0;
@@ -9,26 +9,23 @@ public class Juguete {
 	private double precioBase;
 	
 	public Juguete() {
-		super();
+		super(null);
 	}
 
 	public Juguete(String marca) {
-		super();
-		this.marca = marca;
+		super(new Juguete(marca));
+		//this.marca = marca;
 	}
 
 	public Juguete(String marca, String paisOrigen, double precioBase) {
-		super();
-		this.marca = marca;
+		super(new Juguete(marca, paisOrigen, precioBase));
+		/*this.marca = marca;
 		this.paisOrigen = paisOrigen;
-		this.precioBase = precioBase;
+		this.precioBase = precioBase;*/
 	}
 	
 	public double calcularPrecio() {
 		
 		return 5.5;
 	}
-	
-	
-
 }
